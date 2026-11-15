@@ -1,2 +1,9 @@
-# Do not ignore this file so the folder structure remains
+# Only the lab inputs are tracked; anything else dropped in here is ignored
+*
 !.gitignore
+!a.mp4
+!b.mp4
+!K.csv
+!D.csv
+!a.yaml
+!b.yaml

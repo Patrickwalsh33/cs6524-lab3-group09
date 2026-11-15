@@ -1,0 +1,12 @@
+# Video b: static camera, the shoe spins on a stool (portrait 720x1280, static start trimmed).
+# The background does not move, so matches on it describe "no motion" and would break the
+# essential matrix. min_flow drops matches that move less than this many pixels between frames,
+# leaving (mostly) points on the spinning shoe.
+frame_step: 2
+max_frames: 400
+max_width: 720       # keep full resolution: the shoe only fills a small part of the frame
+crop: [0.0, 0.55, 1.0, 0.97]   # keep the band with the shoe and stool top (K shifted to match)
+detector: SIFT
+min_flow: 3.0
+calib_width: 360    # K.csv is the Lab 2 iPhone calibration at 360x640 portrait
+keyframe_flow: 12.0   # px; keep a frame only once the shoe has moved this much (the spin is uneven)

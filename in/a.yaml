@@ -1,0 +1,8 @@
+# Video a: camera moves around a static shoe (portrait 720x1280, 638 frames).
+# Any key from DEFAULTS in mypylibs/io_utils.py can be overridden here.
+frame_step: 8        # 638 frames / 8 = 80 frames covering the full lap
+max_frames: 80
+max_width: 360       # process at 360x640
+detector: SIFT
+min_flow: 0.0
+calib_width: 360    # K.csv is the Lab 2 iPhone calibration at 360x640 portrait
